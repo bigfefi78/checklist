@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <div class="jumbotron text-center bg-primary text-white" style="margin-bottom:0">
+        <h1>PROCEDURA DI COLLAUDO BANCHI OPTOFLASH</h1>
+    </div>
+    <br>
+    <p class="font-monospace fs-6" style="margin-left: 25px;">Di seguito la procedura per la configurazione ed il
+        collaudo di un banco Optoflash</p>
+
+    <div class="row">
+        <div class="col-5">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button bg-light text-dark" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <div class="font-monospace fs-4" style="margin-left: 25px;">Configurazione driver ELMO</div>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ol>
+                                <li>Lanciare il software di gestione del driver.</li>
+                                <li>Aggiungere un <code data-bs-toggle="offcanvas" href="#golddrive" role="button"
+                                        aria-controls="golddrive">gold drive</code>.
+                                </li>
+                                <li>Eseguire la connessione al driver utilizzando l'opzione <code
+                                        data-bs-toggle="offcanvas" href="#directaccess" role="button"
+                                        aria-controls="directaccess">Direct Access USB</code>.
+                                </li>
+                                <li>Caricare nella memoria del driver il file di configurazione, prestando attenzione a
+                                    selezionare l'opzione <code>set from file</code>.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="golddrive" aria-labelledby="golddriveLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="golddriveLabel">Aggiunta gold drive</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                <img src="images/elmo__driver/elmo_1.png" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="directaccess" aria-labelledby="directaccessLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="golddriveLabel">Connessione USB al driver</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                <img src="images/elmo__driver/elmo_2.png" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

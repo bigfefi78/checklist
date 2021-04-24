@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="jquery/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <script language="VBscript">
+    
+        Set WshShell = CreateObject("WScript.Shell")
+        Set fso = CreateObject("Scripting.FileSystemObject")
+        Set f = fso.GetFolder(".")
+
+        strHtml = ""
+
+        ' DataArea.InnerHTML = "<textarea cols=122 rows=25></textarea>"
+
+        Sub Init
+        'document.getElementById("s100").innerText = "OF S100"
+        'document.getElementById("s200").innerText = "OF S200"
+        'document.getElementById("s300").innerText = "OF S300"
+        End Sub
+
+        Sub RR_map
+        rr_dest_folder = "C:\ProgramData\Marposs\Opto\"
+        bench_type = document.getElementById("test").value
+        select case bench_type
+		case 1
+        rr_source_folder = f & "\MappaturaRR\S100\Mappatura\ResidentRef"			
+		case 2
+        rr_source_folder = f & "\MappaturaRR\S200\Mappatura\ResidentRef"
+		case 3
+        rr_source_folder = f & "\MappaturaRR\S300\Mappatura\ResidentRef"
+        end select
+        Msgbox "Copy RR Mapping folder from:" & vbCrLf & rr_source_folder & vbCrLf & " to: " & vbCrLf & rr_dest_folder
+        fso.CopyFolder rr_source_folder, rr_dest_folder
+        logbox.value = "Ciao!"
+        End Sub
+
+    </script>
+
+</head>
+
+<body onLoad="Init()">
+
+    <hr style="color:#0080ff;">
+
+    <div style="margin-top: 10;">
+        <text>Seleziona il tipo di banco:</text>
+        <select id="test" name="test" style="width: 350px;margin-left:15px;">
+            <option value=1 id="s100">OptoFlash S100</option>
+            <option value=2 id="s200">OptoFlash S200</option>
+            <option value=3 id="s300">OptoFlash S300</option>
+        </select>
+        <button type="button" onclick="RR_map()" style="margin-top: 10;margin-left:15px;">Mappatura RR</button>
+    </div>
+
+    <div>
+        <!-- <button type="button" onclick="RR_map()" style="margin-top: 10;border-radius: 4px;">Mappatura RR</button> -->
+    </div>
+
+    <textarea id="logbox" name="w3review" rows="10" cols="80" style="margin-top: 20;">
+
+  </textarea>
+    <hr style="margin-top: 10; color:#0080ff;">
+
+    <div>
+        <button type="button">Click Me!</button>
+    </div>
+
+    <div id="DataArea" name="DataArea"></div>
+</body>
+
+</html>
