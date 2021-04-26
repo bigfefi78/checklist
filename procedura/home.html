@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bs-4.6.0/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link href="fa-5.15.3/css/all.css" rel="stylesheet">
+    <!--load all styles -->
+    <style>
+        body {
+            /* font-family: "Lato", sans-serif; */
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .sidenav a {
+            padding: 6px 6px 6px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #f4f4f4;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 250px;
+            /* Same as the width of the sidenav */
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+    <title>Procedura</title>
+
+</head>
+
+<body>
+    <div class="sidenav">
+        <div class="sidenav"
+            style="background-color: #073c6e;background-image: linear-gradient(#09294e, #015190, #ffff );">
+            <div class="list-group">
+                <a href="home.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Home</a>
+                <a href="elmo.html"><i class="fa fa-cog fa-fw " aria-hidden="true"></i>&nbsp;Setup software</a>
+                <a href="#"><i class="fas fa-edit fa-fw"></i></i>&nbsp;Configurazione</a>
+                <a href="#"><i class="fa fa-thermometer-three-quarters fa-fw" aria-hidden="true"></i> &nbsp;Deriva
+                    termica</a>
+                <a href="#"><i class="fas fa-calculator fa-fw"></i> &nbsp;Calcoli</a>
+                <a href="#"><i class="fa fa-question fa-fw" aria-hidden="true"></i>&nbsp;Aiuto</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <header>
+            <div class="jumbotron" style="background-image: url(images/misc/banner_02.jpg);
+                color: whitesmoke; text-align: center;border-radius: 0rem;">
+                <div class="container">
+                    <h1>COLLAUDO BANCHI OPTOFLASH</h1>
+                    <p>Procedura per il setup ed il collaudo metrologico</p>
+                </div>
+            </div>
+        </header>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <h3><strong>Procedura #:</strong>&nbsp;09xxxxxxxx</h3>
+            </li>
+            <li class="list-group-item">
+                <h3><strong>Titolo:</strong>COLLAUDO BANCHI OPTOFLASH</h3>
+            </li>
+            <li class="list-group-item">
+                <h3><strong>Scopo:</strong>&nbsp;La presente procedura ha lo scopo di indicare i passaggi da seguire per
+                    procedere al setup ed al collaudo metrologico dei banchi OptoFlash.</h3>
+            </li>
+        </ul>
+        <div class="row">
+            <div class="col" style="text-align: center;margin-top: 50px;">
+                <a href="index.html">
+                    <img src="images/misc/start.jpg" class="img-thumbnail" alt="..."
+                        style="border-style: none;size: 64px;width:128px;height:128px;">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="jquery/3.5.1/jquery.min.js"></script>
+    <script src="bs-4.6.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0023)http://www.marposs.com/ -->
 
 <html lang="en">
 
@@ -9,71 +8,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="bootstrap/3.4.1/css/bootstrap.min.css" type="text/css">
-    <script src="bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/4.1.3/css/bootstrap.min.css" type="text/css">
+    <script src="bootstrap/4.1.3/js/bootstrap.bundle.js"></script>
     <script type="text/javascript" src="/eel.js"></script>
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            font-family: "Lato", sans-serif;
-        }
-
-        .sidenav {
-            height: 100%;
-            width: 200px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: rgb(39, 39, 41);
-            overflow-x: hidden;
-            padding-top: 20px;
-        }
-
-        .sidenav a {
-            padding: 6px 8px 6px 16px;
-            text-decoration: none;
-            font-size: 18px;
-            color: #818181;
-            display: block;
-        }
-
-        .sidenav a:hover {
-            color: #f1f1f1;
-        }
-
-        .main {
-            margin-left: 160px;
-            /* Same as the width of the sidenav */
-            font-size: 28px;
-            /* Increased text to enable scrolling */
-            padding: 0px 10px;
-        }
-
-        @media screen and (max-height: 450px) {
-            .sidenav {
-                padding-top: 15px;
-            }
-
-            .sidenav a {
-                font-size: 18px;
-            }
-        }
-    </style>
-
     <title>Document</title>
 </head>
 
 <body>
     <div id="model"></div>
     <script>
-        $("#model").load("model.html");
+        $("#model").load("home.html");
     </script>
-    
-    <div class="container">
-        <bs3-h1>INSTALLAZIONE DEL SOFTWARE</bs3-h1>
-    </div>
-    
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h2><b><u>Norma numero:</u> 09xxxxxxxx</b></h2>
+                </li>
+                <li class="list-group-item">
+                    <h3><b><u>Titolo:</u> Procedura per il setup ed il collaudo metrologico dei banchi OptoFlash
+                        </b></h3>
+                </li>
+            </ul>
+        </div>
+    </main>
 </body>
 
 </html>
