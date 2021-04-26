@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bs-4.6.0/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link href="fa-5.15.3/css/all.css" rel="stylesheet">
+    <!--load all styles -->
+    <style>
+        body {
+            /* font-family: "Lato", sans-serif; */
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .sidenav a {
+            padding: 6px 6px 6px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #f4f4f4;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 250px;
+            /* Same as the width of the sidenav */
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        .list-group-item {
+            display: list-item;
+            margin-left: 30px;
+            border: 0;
+        }
+
+        .modal-dialog {
+            position: relative;
+            display: table;
+            /* This is important */
+            overflow-y: auto;
+            overflow-x: auto;
+            width: auto;
+            min-width: 300px;
+        }
+    </style>
+    <title>Procedura</title>
+
+</head>
+
+<body>
+    <div class="sidenav">
+        <div class="sidenav"
+            style="background-color: #073c6e;background-image: linear-gradient(#09294e, #015190, #ffff );">
+            <div class="list-group">
+                <a href="home.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Home</a>
+                <a href="elmo.html"><i class="fa fa-cog fa-fw " aria-hidden="true"></i>&nbsp;Setup software</a>
+                <a href="#"><i class="fas fa-edit fa-fw"></i></i>&nbsp;Configurazione</a>
+                <a href="#"><i class="fa fa-thermometer-three-quarters fa-fw" aria-hidden="true"></i> &nbsp;Deriva
+                    termica</a>
+                <a href="#"><i class="fas fa-calculator fa-fw"></i> &nbsp;Calcoli</a>
+                <a href="#"><i class="fa fa-question fa-fw" aria-hidden="true"></i>&nbsp;Aiuto</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <header>
+            <div class="jumbotron" style="background-image: url(images/misc/banner_02.jpg);
+                color: whitesmoke; text-align: center;border-radius: 0rem;">
+                <div class="container">
+                    <h1>COLLAUDO BANCHI OPTOFLASH</h1>
+                    <p>Procedura per il setup ed il collaudo metrologico</p>
+                </div>
+            </div>
+        </header>
+        <div class="accordion" id="accordionExample" style="margin: 0 10px 0 10px">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            <h2>CONFIGURAZIONE DRIVER ELMO</h2>
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <ol class="list-group">
+                            <li class="list-group-item">Lanciare il software di programmazione del driver, facendo
+                                doppio click sull'<code data-toggle="modal" role="button"
+                                    data-target="#elmo_0">icona</code> presente
+                                sul desktop.
+                            </li>
+                            <div class="modal fade" id="elmo_0" tabindex="-1" role="dialog" aria-labelledby="elmo_0"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-xl" role="document">
+                                    <div class="modal-content">
+                                        <!-- Modal heading -->
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="elmo_0">
+                                                Screenshot
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">
+                                                    ×
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <!-- Modal body with image -->
+                                        <div class="modal-body">
+                                            <img src="images/elmo__driver/elmo_0.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <li class="list-group-item">Creare un <code data-toggle="modal" role="button"
+                                    data-target="#elmo_1">collegamento USB-Seriale</code> con il driver
+                            </li>
+                            <div class="modal fade" id="elmo_1" tabindex="-1" role="dialog" aria-labelledby="elmo_1"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-xl" role="document">
+                                    <div class="modal-content">
+                                        <!-- Modal heading -->
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="elmo_1">
+                                                Screenshot
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">
+                                                    ×
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <!-- Modal body with image -->
+                                        <div class="modal-body">
+                                            <img src="images/elmo__driver/elmo_1.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <li class="list-group-item">Connettersi al driver</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Collapsible Group Item #2
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Collapsible Group Item #3
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="jquery/3.5.1/jquery.min.js"></script>
+    <script src="bs-4.6.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
