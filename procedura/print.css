@@ -1,0 +1,7 @@
+/* @media print {
+    size: A5;
+} */
+
+@page {
+    size: 4in 6in;
+}
