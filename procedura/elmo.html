@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <meta http-equiv="X-UA-Compatible" content="IE=11">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CSS -->
@@ -70,7 +70,12 @@
             overflow-y: auto;
             overflow-x: auto;
             width: auto;
+            height: auto;
             min-width: 300px;
+        }
+
+        .modal-content {
+            height: auto;
         }
     </style>
     <title>Procedura</title>
@@ -83,7 +88,7 @@
             style="background-color: #073c6e;background-image: linear-gradient(#09294e, #015190, #ffff );">
             <div class="list-group">
                 <a href="home.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Home</a>
-                <a href="elmo.html"><i class="fa fa-cog fa-fw " aria-hidden="true"></i>&nbsp;Setup software</a>
+                <a href="elmo_1.html"><i class="fa fa-cog fa-fw " aria-hidden="true"></i>&nbsp;Setup software</a>
                 <a href="#"><i class="fa fa-edit fa-fw" aria-hidden="true"></i>&nbsp;Configurazione</a>
                 <a href="#"><i class="fa fa-thermometer-three-quarters fa-fw" aria-hidden="true"></i>&nbsp;Deriva
                     termica</a>
@@ -141,7 +146,7 @@
                                         </div>
                                         <!-- Modal body with image -->
                                         <div class="modal-body">
-                                            <img src="images/elmo__driver/elmo_0.png" />
+                                            <img src="images/elmo__driver/elmo_0.png" style="height: 100%;" />
                                         </div>
                                     </div>
                                 </div>
@@ -149,8 +154,8 @@
                             <li class="list-group-item">Creare un "<code data-toggle="modal" role="button"
                                     data-target="#elmo_1">gold drive</code>".
                             </li>
-                            <div class="modal fade" id="elmo_1" tabindex="-1" role="dialog" aria-labelledby="elmo_1"
-                                aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" id="elmo_1" tabindex="-1" role="dialog"
+                                aria-labelledby="elmo_1" aria-hidden="true">
                                 <div class="modal-dialog modal-xl" role="document">
                                     <div class="modal-content">
                                         <!-- Modal heading -->
@@ -194,16 +199,35 @@
                                     </div>
                                 </div>
                             </div>
-                            <li class="list-group-item">Selezionare la porta seriale dell'azionamento e attivare la
+                            <li class="list-group-item">Selezionare la porta seriale dell'azionamento (in genere quella
+                                con il <code data-toggle="modal" role="button"
+                                    data-target="#elmo_3-0">numero più alto</code>) e attivare la
                                 <code data-toggle="modal" role="button" data-target="#elmo_3">connessione</code>.
                             </li>
+                            <!-- Modal -->
+                            <div class="modal fade" id="elmo_3-0" tabindex="-1" role="dialog" aria-labelledby="elmo_3-0"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-xl" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="elmo_3-0">Screenshot</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="images/elmo__driver/elmo_3-0.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- Modal -->
                             <div class="modal fade" id="elmo_3" tabindex="-1" role="dialog" aria-labelledby="elmo_3"
                                 aria-hidden="true">
                                 <div class="modal-dialog modal-xl" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title">Screenshot</h5>
+                                            <h5 class="modal-title" id="elmo_3">Screenshot</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
@@ -211,14 +235,32 @@
                                         <div class="modal-body">
                                             <img src="images/elmo__driver/elmo_3.png">
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <li class="list-group-item">Per caricare i parametri dell'azionamento, selezionare il tab
+                                "Parameters" e successivamente "<code data-toggle="modal" role="button"
+                                    data-target="#elmo_4">Textual</code>"
+                                in alto a sinistra nella schermata.
+                            </li>
+                            <!-- Modal -->
+                            <div class="modal fade" id="elmo_4" tabindex="-1" role="dialog" aria-labelledby="elmo_4"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-xl" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="elmo_4">Screenshot</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="images/elmo__driver/elmo_4.png">
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                         </ol>
                     </div>
                 </div>

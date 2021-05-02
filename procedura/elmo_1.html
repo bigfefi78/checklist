@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=11">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bs-4.6.0/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link href="fa-5.15.3/css/all.css" rel="stylesheet">
+    <!--load all styles -->
+    <style>
+        body {
+            /* font-family: "Lato", sans-serif; */
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .sidenav a {
+            padding: 6px 6px 6px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #f4f4f4;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 250px;
+            /* Same as the width of the sidenav */
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        .list-group-item {
+            display: list-item;
+            margin-left: 30px;
+            border: 0;
+        }
+
+        .modal-dialog {
+            position: relative;
+            display: table;
+            /* This is important */
+            overflow-y: auto;
+            overflow-x: auto;
+            width: auto;
+            height: auto;
+            min-width: 300px;
+        }
+
+        .modal-content {
+            height: auto;
+        }
+
+        .modal-header {
+            background-color: teal;
+        }
+    </style>
+    <title>Procedura</title>
+
+</head>
+
+<body>
+    <div class="sidenav">
+        <div class="sidenav"
+            style="background-color: #073c6e;background-image: linear-gradient(#09294e, #015190, #ffff );">
+            <div class="list-group">
+                <a href="home.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Home</a>
+                <a href="elmo.html"><i class="fa fa-cog fa-fw " aria-hidden="true"></i>&nbsp;Setup software</a>
+                <a href="#"><i class="fa fa-edit fa-fw" aria-hidden="true"></i>&nbsp;Configurazione</a>
+                <a href="#"><i class="fa fa-thermometer-three-quarters fa-fw" aria-hidden="true"></i>&nbsp;Deriva
+                    termica</a>
+                <a href="#"><i class="fa fa-calculator fa-fw" aria-hidden="true"></i>&nbsp;Calcoli</a>
+                <a href="#"><i class="fa fa-photo-video fa-fw" aria-hidden="true"></i>&nbsp;Video</a>
+                <a href="#"><i class="fa fa-question fa-fw" aria-hidden="true"></i>&nbsp;Aiuto</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <header>
+            <div class="jumbotron" style="background-image: url(images/misc/banner_02.jpg);
+                color: whitesmoke; text-align: center;border-radius: 0rem;">
+                <div class="container">
+                    <h1>COLLAUDO BANCHI OPTOFLASH</h1>
+                    <p>Procedura per il setup ed il collaudo metrologico</p>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Launch demo modal
+        </button> -->
+
+        <!-- Modal -->
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color:rgb(248, 172, 7)">
+                        <h5 class="modal-title" id="exampleModalLabel">Screenshot</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/elmo__driver/elmo_2.png" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+        <div class="accordion" id="accordionExample" style="margin: 0 10px 0 10px">
+
+            <!-- Accordion ELMO-->
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <button class="btn btn-link btn-block text-center" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <h2>CONFIGURAZIONE DRIVER ELMO</h2>
+                                </button>
+                            </div>
+                            <div class="col-sm-4">
+                                <a href="#" data-toggle="modal" data-target="#elmo_video"><i
+                                        class="fa fa-photo-video fa-fw" aria-hidden="true"></i>&nbsp;Video</a>
+                            </div>
+                        </div>
+
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <ol class="start" start="1">
+                            <li>Avviare il software di gestione del driver tramite l'<code role="button"
+                                    data-toggle="modal" data-target="#elmo_0">icona</code>
+                                sul desktop.</li>
+
+                            <li>Creare un "<code role="button" data-toggle="modal"
+                                    data-target="#elmo_1">gold drive</code>".</li>
+
+                            <li>Creare una connessione "<code role="button" data-toggle="modal"
+                                    data-target="#elmo_2">Direct Access USB</code>".</li>
+
+                            <li>Selezionare la porta seriale dell'azionamento (in genere quella
+                                con il <code data-toggle="modal" role="button"
+                                    data-target="#elmo_3-0">numero più alto</code>) e attivare la
+                                <code data-toggle="modal" role="button" data-target="#elmo_3">connessione</code>.
+                            </li>
+                            <li>Per caricare i parametri dell'azionamento, selezionare il tab
+                                "Parameters" e successivamente "<code data-toggle="modal" role="button"
+                                    data-target="#elmo_4">Textual</code>"
+                                in alto a sinistra nella schermata.
+                            </li>
+                            <li>Nella <code data-toggle="modal" role="button"
+                                    data-target="#elmo_5">finestra di dialogo</code> che appare:
+                                <ol type="a">
+                                    <li>
+                                        Selezionare "<strong><u><i>Set from file</i></u></strong>". <b
+                                            style="color: brown;">(IMPORTANTE!)</b>
+                                    </li>
+                                    <li>
+                                        Caricare il file contenente la configurazione del driver
+                                        (<i>Parametrs_SRP5080.gprm</i>).
+                                    </li>
+                                    <li>
+                                        Premere il tasto "Download".
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                Al tremine della procedura premere "<code role="button" data-toggle="modal"
+                                    data-target="#elmo_6">Close</code>".
+                            </li>
+                        </ol>
+                        <p>Ora è necessario verificare che i parametri siano stati coricati correttamente.</p>
+                        <ol class="continue" start="8">
+                            <li>Selezionare "<code role="button" data-toggle="modal"
+                                    data-target="#elmo_7">Drive Setup and Motion</code>".
+                            </li>
+                            <li>Abilitare l'<code role="button" data-toggle="modal"
+                                    data-target="#elmo_8">azionamento</code>.
+                            </li>
+                            <li>Effettuare una rotazione del <code role="button" data-target="#elmo_9"
+                                    data-toggle="modal">motore</code>.
+                            </li>
+                            <li>Disabilitare l'<code role="button" data-toggle="modal"
+                                    data-target="#elmo_10">azionamento</code>.
+                            </li>
+                            <li>Verificare che i parametri siano stati caricati correttamente nell'azionamento,
+                                digitando il comando "<code role="button" data-toggle="modal"
+                                    data-target="#elmo_11">[AA10]</code>" nella finestra apposita. <br>L'indirizzo IP
+                                dell'azionamento deve essere <i>169.254.2.2</i>
+                            </li>
+                            <li>
+                                Digitare il comando "<code role="button" data-toggle="modal"
+                                    data-target="#elmo_12">SV</code>" nella finestra apposita per salvare i parametri
+                                nella memoria del'azionamento.
+                            </li>
+                            <li>
+                                <code role="button" data-toggle="modal" data-target="#elmo_13">Disconnettere</code>
+                                l'azionamento e <code role="button" data-toggle="modal"
+                                    data-target="#elmo_14">chiudere</code> il software di gestione.<br>
+                                    Non è necessario salvare l'ambiente di lavoro.
+                            </li>
+
+                        </ol>
+                    </div>
+
+                    <h2>La configurazione dell'azionamento è terminata.</h2>
+                </div>
+            </div>
+            <!-- ELMO MODALS-->
+
+            <div class="all_elmo_modal">
+                <!-- MODAL ELMO VIDEO -->
+                <div class="modal fade" id="elmo_video" tabindex="-1" aria-labelledby="elmo_video_label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elmo_0_video">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <video width="1280" height="960" autoplay muted>
+                                    <source src="video/config__elmo.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL ELMO 0 -->
+                <div class="modal fade" id="elmo_0" tabindex="-1" aria-labelledby="elmo_0_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elmo_0_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/elmo__driver/elmo_0.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL ELMO 1 -->
+                <div class="modal fade" id="elmo_1" tabindex="-1" aria-labelledby="elmo_1_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elmo_1_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/elmo__driver/elmo_1.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL ELMO 2 -->
+                <div class="modal fade" id="elmo_2" tabindex="-1" aria-labelledby="elmo_2_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elmo_2_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/elmo__driver/elmo_2.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL ELMO 3-0 -->
+                <div class="modal fade" id="elmo_3-0" tabindex="-1" aria-labelledby="elmo_3-0_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elmo_3-0_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/elmo__driver/elmo_3-0.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL ELMO 3 -->
+                <div class="modal fade" id="elmo_3" tabindex="-1" aria-labelledby="elmo_3_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elmo_3_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/elmo__driver/elmo_3.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL ELMO 4 -->
+                <div class="modal fade" id="elmo_4" tabindex="-1" aria-labelledby="elmo_4_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elmo_4_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/elmo__driver/elmo_4.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL ELMO 5 -->
+                <div class="modal fade" id="elmo_5" tabindex="-1" aria-labelledby="elmo_5_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elmo_5_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/elmo__driver/elmo_5.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL ELMO 6 -->
+                <div class="modal fade" id="elmo_6" tabindex="-1" aria-labelledby="elmo_6_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elmo_6_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/elmo__driver/elmo_6.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL ELMO 7 -->
+                <div class="modal fade" id="elmo_7" tabindex="-1" aria-labelledby="elmo_7_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elmo_7_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/elmo__driver/elmo_7.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL ELMO 8 -->
+                <div class="modal fade" id="elmo_8" tabindex="-1" aria-labelledby="elmo_8_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elmo_8_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/elmo__driver/elmo_8.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL ELMO 9 -->
+                <div class="modal fade" id="elmo_9" tabindex="-1" aria-labelledby="elmo_9_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elmo_9_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/elmo__driver/elmo_9.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL ELMO 10 -->
+                <div class="modal fade" id="elmo_10" tabindex="-1" aria-labelledby="elmo_10_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elmo_10_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/elmo__driver/elmo_10.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL ELMO 11 -->
+                <div class="modal fade" id="elmo_11" tabindex="-1" aria-labelledby="elmo_11_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elmo_11_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/elmo__driver/elmo_11.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL ELMO 12 -->
+                <div class="modal fade" id="elmo_12" tabindex="-1" aria-labelledby="elmo_12_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elmo_12_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/elmo__driver/elmo_12.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL ELMO 13 -->
+                <div class="modal fade" id="elmo_13" tabindex="-1" aria-labelledby="elmo_13_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elmo_13_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/elmo__driver/elmo_13.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL ELMO 14 -->
+                <div class="modal fade" id="elmo_14" tabindex="-1" aria-labelledby="elmo_14_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="elmo_14_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/elmo__driver/elmo_14.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Accordion OPTO-->
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-center" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                            CONFIGURAZIONE AMBIENTE OPTO
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <ol>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="jquery/3.5.1/jquery.min.js"></script>
+        <script src="bs-4.6.0/js/bootstrap.bundle.min.js"></script>
+    </div>
+</body>
+
+</html>
