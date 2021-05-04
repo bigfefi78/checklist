@@ -63,6 +63,10 @@
             border: 0;
         }
 
+        li {
+            margin-bottom: 20px;
+        }
+
         .modal-dialog {
             position: relative;
             display: table;
@@ -92,14 +96,13 @@
             style="background-color: #073c6e;background-image: linear-gradient(#09294e, #015190, #ffff );">
             <div class="list-group">
                 <a href="home.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Home</a>
-                <a href="elmo.html"><i class="fa fa-cog fa-fw " aria-hidden="true"></i>&nbsp;Setup software</a>
-                <a href="#"><i class="fa fa-edit fa-fw" aria-hidden="true"></i>&nbsp;Configurazione</a>
+                <a href="#"><i class="fas fa-map-marked fa-fw" aria-hidden="true"></i>&nbsp;Mappatura</a>
+                <a href="elmo_1.html"><i class="fa fa-cog fa-fw " aria-hidden="true"></i>&nbsp;Setup software</a>
+                <a href="#"><i class="fas fa-edit fa-fw"></i>&nbsp;Configurazione</a>
                 <a href="#"><i class="fa fa-thermometer-three-quarters fa-fw" aria-hidden="true"></i>&nbsp;Deriva
                     termica</a>
-                <a href="#"><i class="fa fa-calculator fa-fw" aria-hidden="true"></i>&nbsp;Calcoli</a>
-                <a href="#"><i class="fa fa-photo-video fa-fw" aria-hidden="true"></i>&nbsp;Video</a>
+                <a href="#"><i class="fas fa-calculator fa-fw"></i>&nbsp;Calcoli</a>
                 <a href="#"><i class="fa fa-question fa-fw" aria-hidden="true"></i>&nbsp;Aiuto</a>
-
             </div>
         </div>
     </div>
@@ -144,6 +147,7 @@
 
         <div class="accordion" id="accordionExample" style="margin: 0 10px 0 10px">
 
+            <!-- **************************** -->
             <!-- Accordion ELMO-->
             <div class="card">
                 <div class="card-header" id="headingOne">
@@ -156,8 +160,8 @@
                                 </button>
                             </div>
                             <div class="col-sm-4">
-                                <a href="#" data-toggle="modal" data-target="#elmo_video"><i
-                                        class="fa fa-photo-video fa-fw" aria-hidden="true"></i>&nbsp;Video</a>
+                                <a target="_blank" href="video_config_elmo.html"><i class="fa fa-photo-video fa-fw"
+                                        aria-hidden="true"></i>&nbsp;Video</a>
                             </div>
                         </div>
 
@@ -169,24 +173,29 @@
                         <ol class="start" start="1">
                             <li>Avviare il software di gestione del driver tramite l'<code role="button"
                                     data-toggle="modal" data-target="#elmo_0">icona</code>
-                                sul desktop.</li>
+                                sul desktop.
+                            </li>
 
                             <li>Creare un "<code role="button" data-toggle="modal"
-                                    data-target="#elmo_1">gold drive</code>".</li>
+                                    data-target="#elmo_1">gold drive</code>".
+                            </li>
 
                             <li>Creare una connessione "<code role="button" data-toggle="modal"
-                                    data-target="#elmo_2">Direct Access USB</code>".</li>
+                                    data-target="#elmo_2">Direct Access USB</code>".
+                            </li>
 
                             <li>Selezionare la porta seriale dell'azionamento (in genere quella
                                 con il <code data-toggle="modal" role="button"
                                     data-target="#elmo_3-0">numero più alto</code>) e attivare la
                                 <code data-toggle="modal" role="button" data-target="#elmo_3">connessione</code>.
                             </li>
+
                             <li>Per caricare i parametri dell'azionamento, selezionare il tab
                                 "Parameters" e successivamente "<code data-toggle="modal" role="button"
                                     data-target="#elmo_4">Textual</code>"
                                 in alto a sinistra nella schermata.
                             </li>
+
                             <li>Nella <code data-toggle="modal" role="button"
                                     data-target="#elmo_5">finestra di dialogo</code> che appare:
                                 <ol type="a">
@@ -236,7 +245,7 @@
                                 <code role="button" data-toggle="modal" data-target="#elmo_13">Disconnettere</code>
                                 l'azionamento e <code role="button" data-toggle="modal"
                                     data-target="#elmo_14">chiudere</code> il software di gestione.<br>
-                                    Non è necessario salvare l'ambiente di lavoro.
+                                Non è necessario salvare l'ambiente di lavoro.
                             </li>
 
                         </ol>
@@ -593,36 +602,341 @@
                 </div>
 
             </div>
+
+            <!-- **************************** -->
+            <!-- Accordion OPTIC-->
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <button class="btn btn-link btn-block text-center" type="button" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    <h2>INSTALLAZIONE INTERFACCIA OPTIC</h2>
+                                </button>
+                            </div>
+                            <div class="col-sm-4">
+                                <a target="_blank" href="#"><i class="fa fa-photo-video fa-fw"
+                                        aria-hidden="true"></i>&nbsp;Video</a>
+                            </div>
+                        </div>
+
+                    </h2>
+                </div>
+
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <ol class="start" start="1">
+                            <li>Avviare il software di installazione dell'interfaccia <code role="button"
+                                    data-toggle="modal" data-target="#elmo_0">OPTIC</code>.
+                            </li>
+                        </ol>
+
+                        <p>Ora è necessario abilitare l'integrazione dell'interfaccia OPTIC.</p>
+
+                        <ol class="continue" start="8">
+                            <li>Selezionare "<code role="button" data-toggle="modal"
+                                    data-target="#elmo_7">Drive Setup and Motion</code>".
+                            </li>
+                        </ol>
+                    </div>
+
+                    <h2>L'installazione è terminata.</h2>
+                </div>
+            </div>
+
+            <!-- **************************** -->
             <!-- Accordion OPTO-->
             <div class="card">
                 <div class="card-header" id="headingTwo">
                     <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-center" type="button" data-toggle="collapse"
-                            data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
-                            CONFIGURAZIONE AMBIENTE OPTO
-                        </button>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <button class="btn btn-link btn-block text-center" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    <h2>CONFIGURAZIONE AMBIENTE OPTO</h2>
+                                </button>
+                            </div>
+                            <div class="col-sm-4">
+                                <a href="#"><i class="fa fa-photo-video fa-fw" aria-hidden="true"></i>&nbsp;Video</a>
+                            </div>
+                        </div>
+
                     </h2>
                 </div>
 
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                     <div class="card-body">
-                        <ol>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                        <ol class="start" start="1">
+                            <li>Avviare il software di configurazione OPTO utilizzando il tool <code role="button"
+                                    data-toggle="modal" data-target="#opto_0"><i>oq_config.exe</i></code><br> che si
+                                trova nella cartella <b><i>C:\Program Files (x86)\QSPCW\Bin\Optoflex\</i></b>.
+                            </li>
+
+                            <li>Dopo una serie di schermate <i>DOS</i> apparirà una <code role="button"
+                                    data-toggle="modal" data-target="#opto_1">finestra</code> tramite la quale si
+                                procederà alla definizione del tipo di banco e di forchetta.
+                                <ol type="a" style="margin-top: 10px;">
+                                    <li>Dal primo menu a tendina scegliere il tipo di banco (nell'esempio un <code
+                                            role="button" data-toggle="modal"
+                                            data-target="#opto_1a">OF motorizzato Heidenhain</code>).
+                                    </li>
+                                    <li>Dal secondo menu a tendina scegliere il tipo di forchetta(nell'esempio una <code
+                                            role="button" data-toggle="modal"
+                                            data-target="#opto_1b">forchetta 3 sonde</code>).
+
+                                    </li>
+                                    <li>
+                                        Abilitare l'integrazione con l'interfaccia <code role="button"
+                                            data-toggle="modal" data-target="#opto_1c">OPTIC</code> e premere il tasto
+                                        <i>Execute</i>.
+                                    </li>
+                                </ol>
+                            </li>
+
+                            <li>Quando il tool ha completato la copia dei file della configurazione di base, premere il
+                                tasto <code role="button" data-toggle="modal"
+                                    data-target="#opto_2"><i>Exit</i></code>.<br>
+                                In questo modo è stata creata la cartella
+                                <strong><i>C:\ProgramData\Marposs\QSPCW\Common\OptoWork\</i></strong>.
+                            </li>
+
+                            <li><b><u>Ora è necessario gestire i dati di mappatura con reticolo:</u></b>
+                                <ol type="a" style="margin-top: 10px;">
+                                    <li>
+                                        Se la forchetta <u>è già stata mappata</u>, scaricare i dati dalla chiavetta USB
+                                        lanciando lo script <code role="button" data-toggle="modal"
+                                            data-target="#opto_3"><i>RetrieveDataFromBackupMemory.hta</i></code> e
+                                        <br> indicando la <code role="button" data-toggle="modal"
+                                            data-target="#opto_4"><i>lettera del drive</i></code> contenente i dati di
+                                        mappatura
+                                    </li>
+                                    <li>
+                                        Se la forchetta <u><b>NON</b> è stata mappata</u>, si rimanda alla procedura di <a href="#" >mappatura con reticolo</a>
+                                    </li>
+
+                                </ol>
+
+
+                            </li>
+
+                            <!-- <li>Nella <code data-toggle="modal" role="button"
+                                    data-target="#elmo_5">finestra di dialogo</code> che appare:
+                                <ol type="a">
+                                    <li>
+                                        Selezionare "<strong><u><i>Set from file</i></u></strong>". <b
+                                            style="color: brown;">(IMPORTANTE!)</b>
+                                    </li>
+                                    <li>
+                                        Caricare il file contenente la configurazione del driver
+                                        (<i>Parametrs_SRP5080.gprm</i>).
+                                    </li>
+                                    <li>
+                                        Premere il tasto "Download".
+                                    </li>
+                                </ol>
+                            </li> -->
+                            <!-- <li>
+                                Al tremine della procedura premere "<code role="button" data-toggle="modal"
+                                    data-target="#elmo_6">Close</code>".
+                            </li> -->
                         </ol>
                     </div>
                 </div>
             </div>
-        </div>
+            <!-- OPTO MODALS-->
 
-        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-        <script src="jquery/3.5.1/jquery.min.js"></script>
-        <script src="bs-4.6.0/js/bootstrap.bundle.min.js"></script>
-    </div>
+            <div class="all_elmo_modal">
+                <!-- MODAL OPTO VIDEO -->
+                <div class="modal fade" id="opto_video" tabindex="-1" aria-labelledby="opto_video_label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="opto_0_video">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <video width="1280" height="960" autoplay muted>
+                                    <source src="video/config__elmo.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL OPTO 0 -->
+                <div class="modal fade" id="opto_0" tabindex="-1" aria-labelledby="opto_0_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="opto_0_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/opto_env/opto_0.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL OPTO 1 -->
+                <div class="modal fade" id="opto_1" tabindex="-1" aria-labelledby="opto_1_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="opto_1_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/opto_env/opto_1.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL OPTO 1a -->
+                <div class="modal fade" id="opto_1a" tabindex="-1" aria-labelledby="opto_1a_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="opto_1a_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/opto_env/opto_1a.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL OPTO 1b -->
+                <div class="modal fade" id="opto_1b" tabindex="-1" aria-labelledby="opto_1b_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="opto_1b_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/opto_env/opto_1b.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL OPTO 1c -->
+                <div class="modal fade" id="opto_1c" tabindex="-1" aria-labelledby="opto_1c_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="opto_1c_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/opto_env/opto_1c.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL OPTO 2 -->
+                <div class="modal fade" id="opto_2" tabindex="-1" aria-labelledby="opto_2_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="opto_2_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/opto_env/opto_2.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL OPTO 3 -->
+                <div class="modal fade" id="opto_3" tabindex="-1" aria-labelledby="opto_3_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="opto_3_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/opto_env/opto_3.png" alt="immagine non trovata">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL OPTO 4 -->
+                <div class="modal fade" id="opto_4" tabindex="-1" aria-labelledby="opto_4_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="opto_4_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/opto_env/opto_4.png" alt="immagine non trovata">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+            <script src="jquery/3.5.1/jquery.min.js"></script>
+            <script src="bs-4.6.0/js/bootstrap.bundle.min.js"></script>
+        </div>
 </body>
 
 </html>
