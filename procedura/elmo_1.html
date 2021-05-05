@@ -836,21 +836,19 @@
                             <li><b><u>Ora è necessario gestire i dati di mappatura con reticolo:</u></b>
                                 <ol type="a" style="margin-top: 10px;">
                                     <li>
-                                        Se la forchetta <u>è già stata mappata</u>, scaricare i dati dalla chiavetta USB
-                                        lanciando lo script <code role="button" data-toggle="modal"
-                                            data-target="#opto_3"><i>RetrieveDataFromBackupMemory.hta</i></code> e
-                                        <br> indicando la <code role="button" data-toggle="modal"
-                                            data-target="#opto_4"><i>lettera del drive</i></code> contenente i dati di
-                                        mappatura
-                                    </li>
-                                    <li>
                                         Se la forchetta <u><b>NON</b> è stata mappata</u>, si rimanda alla procedura di
                                         <a href="#">mappatura con reticolo</a>
                                     </li>
+                                    <li>
+                                        Se la forchetta <u>è già stata mappata</u>, scaricare i dati dalla chiavetta USB
+                                        lanciando lo script <code role="button" data-toggle="modal"
+                                            data-target="#opto_3"><i>RetrieveDataFromBackupMemory.hta</i></code>,
+                                        <br> indicando la <code role="button" data-toggle="modal"
+                                            data-target="#opto_4"><i>lettera del drive</i></code> contenente i dati di
+                                        mappatura nella finestra di dialogo che apparirà dopo aver lanciato lo script.
+                                    </li>
 
                                 </ol>
-
-
                             </li>
 
                             <!-- <li>Nella <code data-toggle="modal" role="button"
@@ -873,6 +871,33 @@
                                 Al tremine della procedura premere "<code role="button" data-toggle="modal"
                                     data-target="#elmo_6">Close</code>".
                             </li> -->
+                        </ol>
+
+                        <p> Creazione di una applicazione OPTO:</p>
+
+                        <ol class="continue" start="5">
+                            <li>
+                                Dal menu <i>Start</i> di <i>Windows</i> cercare e lanciare <code role="button"
+                                    data-target="#opto_5" data-toggle="modal"> Application Explorer</code>.
+                            </li>
+
+                            <li>Dalla schermata proncipale del programma selezionare <code role="button"
+                                    data-toggle="modal"
+                                    data-target="#opto_6">File <b>&#x2794;</b> New Application</code>.
+                            </li>
+
+                            <li>
+                                Nella finestra proposta selezionare "<code role="button" data-target="#opto_7"
+                                    data-toggle="modal">OPTO3</code>" e utilizzare il numero di serie del banco in
+                                collaudo per il <code role="button" data-toggle="modal"
+                                    data-target="#opto_7">nome dell'applicazione</code>. Quindi premere <i>OK</i>.
+                            </li>
+
+                            <li>
+                                Nella schermata successiva premere <code role="button" data-target="#opto_8"
+                                    data-toggle="modal">Execute</code> e successivamente <code role="button"
+                                    data-toggle="modal" data-target="#opto_9">Exit</code>.
+                            </li>
                         </ol>
                     </div>
                 </div>
@@ -1055,6 +1080,106 @@
                             </div>
                             <div class="modal-body">
                                 <img src="images/opto_env/opto_4.png" alt="immagine non trovata">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL OPTO 5 -->
+                <div class="modal fade" id="opto_5" tabindex="-1" aria-labelledby="opto_5_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="opto_5_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/opto_env/opto_5.png" alt="immagine non trovata">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL OPTO 6 -->
+                <div class="modal fade" id="opto_6" tabindex="-1" aria-labelledby="opto_6_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="opto_6_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/opto_env/opto_6.png" alt="immagine non trovata">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL OPTO 7 -->
+                <div class="modal fade" id="opto_7" tabindex="-1" aria-labelledby="opto_7_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="opto_7_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/opto_env/opto_7.png" alt="immagine non trovata">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL OPTO 8 -->
+                <div class="modal fade" id="opto_8" tabindex="-1" aria-labelledby="opto_8_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="opto_8_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/opto_env/opto_8.png" alt="immagine non trovata">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL OPTO 9 -->
+                <div class="modal fade" id="opto_9" tabindex="-1" aria-labelledby="opto_9_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="opto_9_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/opto_env/opto_9.png" alt="immagine non trovata">
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
