@@ -255,7 +255,6 @@
                 </div>
             </div>
             <!-- ELMO MODALS-->
-
             <div class="all_elmo_modal">
                 <!-- MODAL ELMO VIDEO -->
                 <div class="modal fade" id="elmo_video" tabindex="-1" aria-labelledby="elmo_video_label"
@@ -612,7 +611,7 @@
                             <div class="col-sm-8">
                                 <button class="btn btn-link btn-block text-center" type="button" data-toggle="collapse"
                                     data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                    <h2>INSTALLAZIONE INTERFACCIA OPTIC</h2>
+                                    <h3>INSTALLAZIONE INTERFACCIA OPTIC</h3>
                                 </button>
                             </div>
                             <div class="col-sm-4">
@@ -628,20 +627,153 @@
                     <div class="card-body">
                         <ol class="start" start="1">
                             <li>Avviare il software di installazione dell'interfaccia <code role="button"
-                                    data-toggle="modal" data-target="#elmo_0">OPTIC</code>.
+                                    data-toggle="modal" data-target="#optic_0">OPTIC</code>.
+                            </li>
+                            <li>
+                                Selezionare <i>Inglese</i> come lingua di installazione.
+                            </li>
+                            <li>
+                                Seguire la procedura guidata ed inserire:
+                                <ol type="a">
+                                    <li>
+                                        nel campo <i>Username</i> il valore <code role="button" data-toggle="modal"
+                                            data-target="#optic_1">Optoflash</code>
+                                    </li>
+                                    <li>
+                                        nel campo <i>Organization</i> il valore <code role="button" data-toggle="modal"
+                                            data-target="#optic_1">Marposs S.p.A.</code>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <b>NON</b> abilitare l'avvio automatico dell'interfaccia OPTIC.
+                            </li>
+                            <li>
+                                Terminare l'installazione del software.
                             </li>
                         </ol>
 
                         <p>Ora è necessario abilitare l'integrazione dell'interfaccia OPTIC.</p>
 
-                        <ol class="continue" start="8">
-                            <li>Selezionare "<code role="button" data-toggle="modal"
-                                    data-target="#elmo_7">Drive Setup and Motion</code>".
+                        <ol class="continue" start="6">
+                            <li>Dal menù START di <i>Windows</i> cercare la voce "<code role="button"
+                                    data-toggle="modal" data-target="#optic_2">Optic - Tools</code>".
+                            </li>
+                            <li>
+                                Dalla finestra che si apre, lanciare <code role="button" data-toggle="modal"
+                                    data-target="#optic_3">QspcwAndOptic.exe</code>
+                            </li>
+                            <li>
+                                Nel popup che appare cliccare su <code role="button" data-target="#optic_4"
+                                    data-toggle="modal">INTEGRATION Optic on startup</code>.
                             </li>
                         </ol>
                     </div>
 
                     <h2>L'installazione è terminata.</h2>
+                </div>
+            </div>
+            <!-- OPTIC MODALS-->
+            <div class="all_optic_modal">
+
+                <!-- MODAL OPTIC 0 -->
+                <div class="modal fade" id="optic_0" tabindex="-1" aria-labelledby="optic_0_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="optic_0_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/optic/optic_0.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL OPTIC 1 -->
+                <div class="modal fade" id="optic_1" tabindex="-1" aria-labelledby="optic_1_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="optic_1_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/optic/optic_1.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL OPTIC 2 -->
+                <div class="modal fade" id="optic_2" tabindex="-1" aria-labelledby="optic_2_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="optic_2_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/optic/optic_2.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL OPTIC 3 -->
+                <div class="modal fade" id="optic_3" tabindex="-1" aria-labelledby="optic_3_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="optic_3_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/optic/optic_3.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL OPTIC 4 -->
+                <div class="modal fade" id="optic_4" tabindex="-1" aria-labelledby="optic_4_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="optic_4_label">Screenshot</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images/optic/optic_4.png" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -712,7 +844,8 @@
                                         mappatura
                                     </li>
                                     <li>
-                                        Se la forchetta <u><b>NON</b> è stata mappata</u>, si rimanda alla procedura di <a href="#" >mappatura con reticolo</a>
+                                        Se la forchetta <u><b>NON</b> è stata mappata</u>, si rimanda alla procedura di
+                                        <a href="#">mappatura con reticolo</a>
                                     </li>
 
                                 </ol>
@@ -745,7 +878,6 @@
                 </div>
             </div>
             <!-- OPTO MODALS-->
-
             <div class="all_elmo_modal">
                 <!-- MODAL OPTO VIDEO -->
                 <div class="modal fade" id="opto_video" tabindex="-1" aria-labelledby="opto_video_label"
