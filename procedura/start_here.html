@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bs-4.6.0/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link href="fa-5.15.3/css/all.css" rel="stylesheet">
+    <!--load all styles -->
+    <style>
+        body {
+            /* font-family: "Lato", sans-serif; */
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .sidenav a {
+            padding: 6px 6px 6px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #f4f4f4;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 250px;
+            /* Same as the width of the sidenav */
+
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+    <title>Procedura</title>
+
+</head>
+
+<body>
+    <div class="sidenav">
+        <div class="sidenav"
+            style="background-color: #073c6e;background-image: linear-gradient(#09294e, #015190, #ffff );">
+            <div class="list-group">
+                <a href="home.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Home</a>
+                <a href="#"><i class="fas fa-flag-checkered fa-fw" aria-hidden="true"></i>&nbsp;Start here</a>
+                <a href="#"><i class="fas fa-map-marked fa-fw" aria-hidden="true"></i>&nbsp;Mappatura</a>
+                <a href="elmo_1.html"><i class="fa fa-cog fa-fw " aria-hidden="true"></i>&nbsp;Setup software</a>
+                <a href="#"><i class="fas fa-edit fa-fw"></i>&nbsp;Configurazione</a>
+                <a href="#"><i class="fa fa-thermometer-three-quarters fa-fw" aria-hidden="true"></i>&nbsp;Deriva
+                    termica</a>
+                <a href="#"><i class="fas fa-calculator fa-fw"></i>&nbsp;Calcoli</a>
+                <a href="#"><i class="fa fa-question fa-fw" aria-hidden="true"></i>&nbsp;Aiuto</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <header>
+            <div class="jumbotron" style="background-image: url(images/misc/banner_02.jpg);
+                color: whitesmoke; text-align: center;border-radius: 0rem;">
+                <div class="container">
+                    <h1>COLLAUDO BANCHI OPTOFLASH</h1>
+                    <p>Procedura per il setup ed il collaudo metrologico</p>
+                </div>
+            </div>
+        </header>
+        <div class="row">
+            <div class="col" style="margin: 5px 0 0 20px;text-align: center;">
+                <h3><b><u>LINEE GUIDA</u></b></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" style="margin: 5px 20px 0 20px;text-align:left;">
+                <h4><u>Introduzione</u></h4>
+                <p>
+                    I banchi OptoFlash possono essere considerati come composti da tre componenti "meccanici"
+                    principali:
+                <ol type="a">
+                    <li>Misuratore (comunemente chiamato "<b>forchetta</b>").</li>
+                    <li>Gruppo trave.</li>
+                    <li>Telaio (impropriamente chiamato "banco".</li>
+                </ol>
+                Dal punto di vista software invece possiamo considerare due "famiglie":
+                <ol type="a">
+                    <li>software di gestione della forchetta.</li>
+                    <li>software di gestione del banco nel suo complesso.</li>
+                </ol>
+                Durante il processo di setup e collaudo,inizialmente considereremo la forchetta come "entità" a sè
+                stante, e solo successivamente si andrà a ragionare a livello di banco vero e proprio.
+                </p>
+                <h4><u>Forchetta</u></h4>
+                <p>
+                    La forchetta viene pre-assemblata in Camera Bianca. <br>
+                    Possiamo riassumere velocemente i principali passaggi qui eseguiti come segue:
+                <ol type="a">
+                    <li><b>Montaggio</b> dei componenti ottico/meccanici.</li>
+                    <li><b>Setup</b> delle singole telecamere (<b>TLC</b>).</li>
+                    <li><b>Caratterizzazione</b> delle TLC (corrente di calibrazione e individuazione di eventuali difetti del
+                        sensore).</li>
+                    <li><b>Collimazione</b> Emettitore.</li>
+                    <li><b>Allineamento</b> Ricevitore (TLC). </li>
+                </ol>
+                Al termine dei passaggi sopra elencati, la forchetta viene consegnata al MAS, dove:
+                <ol type="a">
+                    <li>si esegue la <b>mappatura con reticolo</b>.</li>
+                    <li>si caratterizzano i <i><b>Resident Reference</b></i>.</li>
+                </ol>
+                A questo punto il processo di caratterizzazione della forchetta (in quanto oggetto a sè stante) si può considerare
+                terminato.
+                </p>
+                <h4><u>Telaio ("banco")</u></h4>
+                <p>
+                    Il telaio viene pre-assemblato e cablato presso un fornitore esterno.<br>
+                    Il pc che lo equipaggia è, invece, configurato parzialmente dai colleghi del CPS.<br>
+                    Brevemente, gli step per il setup del banco sono:
+                <ol type="a">
+                    <li>Installazione forchetta.</li>
+                    <li>Installazione trave.</li>
+                    <li>Completamento installazione software.</li>
+                    <li>Configurazione software.</li>
+                </ol>
+                
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="jquery/3.5.1/jquery.min.js"></script>
+    <script src="bs-4.6.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
