@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Material Design for Bootstrap</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="fa-5.15.3/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" /> -->
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <style>
+    .sidenav {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(22, 121, 202);
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+
+    .sidenav a {
+      padding: 6px 6px 6px 32px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #f4f4f4;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="sidenav-colors sidenav" data-mdb-close-on-esc="false" class="sidenav sidenav-secondary ps" data-mdb-color="secondary"
+    data-mdb-hidden="false" data-mdb-position="absolute" data-mdb-focus-trap="false"
+    style="width: 240px; height: 100%; position: absolute; transition: all 0.3s linear 0s;">
+    <ul class="sidenav-menu">
+      <li class="sidenav-item">
+        <a class="sidenav-link ripple-surface"> <i class="fa fa-home fa-fw me-3"></i><span>Home</span></a>
+      </li>
+      <li class="sidenav-item">
+        <a class="sidenav-link ripple-surface ripple-surface-secondary" data-mdb-toggle="collapse"
+          href="#sidenav-collapse-4-0-0" role="button" aria-expanded="true"><i
+            class="fas fa-flag-checkered fa-fw me-3"></i><span>Start here</span><i class="fas fa-angle-down rotate-icon"
+            style="transform: rotate(180deg);"></i></a>
+        <ul class="sidenav-collapse collapse show" id="sidenav-collapse-4-0-0" style="">
+          <li class="sidenav-item">
+            <a class="sidenav-link ripple-surface">Forchetta</a>
+          </li>
+          <li class="sidenav-item">
+            <a class="sidenav-link ripple-surface">Telaio</a>
+          </li>
+        </ul>
+      </li>
+      <li class="sidenav-item">
+        <a class="sidenav-link ripple-surface ripple-surface-secondary" data-mdb-toggle="collapse"
+          href="#sidenav-collapse-4-0-1" role="button" aria-expanded="true"><i
+            class="fas fa-grin-wink fa-fw me-3"></i><span>Category 2</span><i class="fas fa-angle-down rotate-icon"
+            style="transform: rotate(180deg);"></i></a>
+        <ul class="sidenav-collapse collapse show" id="sidenav-collapse-4-0-1" style="">
+          <li class="sidenav-item">
+            <a class="sidenav-link ripple-surface">Link 4</a>
+          </li>
+          <li class="sidenav-item">
+            <a class="sidenav-link ripple-surface">Link 5</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+      <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+    </div>
+    <div class="ps__rail-y" style="top: 0px; right: 0px;">
+      <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+    </div>
+  </nav>
+  <!-- Start your project here-->
+  <div class="container">
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+      <div class="text-center">
+        <img class="mb-4" src="https://mdbootstrap.com/img/logo/mdb-transparent-250px.png"
+          style="width: 250px; height: 90px;" />
+        <h5 class="mb-3">Thank you for using our product. We're glad you're with us.</h5>
+        <p class="mb-3">MDB Team</p>
+        <a class="btn btn-primary btn-lg" href="https://mdbootstrap.com/docs/standard/getting-started/" target="_blank"
+          role="button">Start MDB tutorial</a>
+      </div>
+    </div>
+  </div>
+  <!-- End your project here-->
+
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+</body>
+
+</html>
